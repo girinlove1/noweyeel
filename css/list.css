@@ -1,0 +1,672 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+KR&family=Space+Grotesk:wght@500&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://use.typekit.net/bto3byu.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:visited {
+  color: whitesmoke;
+}
+
+img {
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+body {
+  background-color: rgb(44, 91, 246);
+  overflow: hidden;
+}
+body .bg {
+  object-fit: contain;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+body .bg .bgbg {
+  background-color: yellow;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  mask-image: url("../img/bgbg.png");
+  -webkit-mask-image: url("../img/bgbg.png");
+  mask-size: 70%;
+  display: block;
+  -webkit-mask-size: 70%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: right;
+  mask-position: right;
+  transform-origin: center center;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+main .topbox {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, yellow 33%, transparent 0%);
+  background-position: bottom;
+  background-size: 12px 4px; /*점선 간격 수정*/
+  background-repeat: repeat-x;
+  color: whitesmoke;
+  text-shadow: 0px 0px 10px whitesmoke;
+}
+main .topbox a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 55px;
+}
+main .topbox a:hover {
+  transform: scale(1.2);
+}
+main .topbox a:visited {
+  color: yellow;
+}
+main .topbox a span {
+  font: normal 14px/1 "Helvetica";
+  font-weight: 600;
+  text-align: left;
+  margin-left: 10px;
+}
+main .left {
+  z-index: 4;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 185px;
+  left: 70px;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
+  color: yellow;
+}
+main .left .label {
+  text-align: right;
+  font: 15px/1.5 "Pretendard Variables";
+  font-weight: 900;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+main .left .label img {
+  width: 20px;
+  margin-right: 10px;
+}
+main .left .label p {
+  opacity: 0;
+}
+main .left .listbox {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, rgb(44, 91, 246), transparent 0%, rgb(44, 91, 246));
+  border: 1px solid yellow;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .left .listbox .topline {
+  height: 27px;
+  padding: 0px 10px;
+  border-bottom: 2px dotted yellow;
+  background-color: rgb(44, 91, 246);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: bold 13px/1.5 "Pretendard Variables";
+}
+main .left .listbox .topline i {
+  font-size: 17px;
+  opacity: 0;
+  text-shadow: 0px 0px 2px rgb(44, 91, 246);
+}
+main .left .listbox .topline i:hover {
+  font-size: 19px;
+}
+main .left .listbox .list {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+}
+main .left .listbox .list .img {
+  width: 80%;
+  height: fit-content;
+}
+main .left .listbox .list .img img {
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  object-fit: contain;
+  margin-top: 10px;
+  pointer-events: none;
+}
+main .left .listbox .list .log {
+  opacity: 1;
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+}
+main .left .listbox .list .log .logt {
+  width: 100%;
+  height: fit-content;
+}
+main .left .listbox .list .log .logt p {
+  font: 13px/1.7 "Pretendard Variables";
+  letter-spacing: -1px;
+  font-weight: 600;
+  color: whitesmoke;
+  text-align: justify;
+}
+main .left .listbox:hover {
+  box-shadow: 0px 0px 3px yellow inset, 0px 0px 10px yellow;
+}
+main .left.on .label > p {
+  opacity: 1;
+}
+main .left.on .listbox {
+  width: 170px;
+  height: fit-content;
+}
+main .phone {
+  z-index: 3;
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+}
+main .phone .phog .screen {
+  position: absolute;
+  width: 257px;
+  height: 422px;
+  right: 353px;
+  top: 230px;
+  background-color: rgb(44, 91, 246);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main .phone .phog .screen .topline {
+  height: 8%;
+  width: 100%;
+  top: 0%;
+  background-color: #2c5bf6;
+  box-shadow: 0px 0px 50px black, 0px 0px 20px yellow inset;
+  padding: 3px 33px;
+  display: flex;
+  justify-content: space-between;
+  color: yellow;
+  font: 15px/2 "Pretendard Variable";
+}
+main .phone .phog .screen .topline .address {
+  display: flex;
+  flex-direction: row;
+}
+main .phone .phog .screen .topline em {
+  font-weight: 700;
+  font-style: normal;
+  display: none;
+}
+main .phone .phog .screen .topline em:hover {
+  font-size: 17px;
+}
+main .phone .phog .screen .topline em.on {
+  display: block;
+}
+main .phone .phog .screen .allfolder {
+  display: none;
+}
+main .phone .phog .screen .allfolder.on {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 8%;
+  padding: 30px 28px;
+  overflow: scroll;
+  font: bold normal 13px/1.5 "Pretendard Variable";
+  text-align: center;
+  text-shadow: 0px 0px 2px rgb(246, 246, 246);
+  color: whitesmoke;
+  paddin-bottom: 50px;
+}
+main .phone .phog .screen .allfolder.on img {
+  border-radius: 20px;
+  width: 70px;
+  object-fit: cover;
+}
+main .phone .phog .screen .allfolder.on article {
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px;
+}
+main .phone .phog .screen .allfolder.on article .g {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .phone .phog .screen .allfolder.on article .g .inner:hover img {
+  width: 80px;
+}
+main .phone .phog .screen .allfolder.on article .g.bot {
+  padding-bottom: 40px;
+}
+main .phone .phog .screen .f1 {
+  display: none;
+}
+main .phone .phog .screen .f1.on {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 8%;
+  padding: 30px 28px;
+  overflow: scroll;
+  font: bold normal 13px/1.5 "Pretendard Variable";
+  text-align: center;
+  text-shadow: 0px 0px 2px rgb(246, 246, 246);
+  color: whitesmoke;
+  paddin-bottom: 50px;
+}
+main .phone .phog .screen .f1.on img {
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.677);
+  width: 80px;
+  object-fit: cover;
+}
+main .phone .phog .screen .f1.on article {
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px;
+}
+main .phone .phog .screen .f1.on article .g {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .phone .phog .screen .f1.on article .g .inner:hover img {
+  width: 90px;
+}
+main .phone .phog .screen .f1.on article .g.bot {
+  padding-bottom: 40px;
+}
+main .phone .phog .screen section {
+  opacity: 0;
+  z-index: 18;
+  position: absolute;
+  width: 94%;
+  height: 97%;
+  top: 200%;
+  left: 1%;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(44, 91, 246), transparent 460%);
+  border: 1px solid yellow;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px yellow inset, 0px 0px 50px black;
+  color: yellow;
+  padding-bottom: 10%;
+  transform: scale(1.4) translateY(-10%);
+}
+main .phone .phog .screen section .topline {
+  height: 27px;
+  width: 100%;
+  padding: 3px 10px;
+  box-shadow: 0px 0px 10px yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: bold 13px/1.5 "Pretendard Variables";
+  color: yellow;
+}
+main .phone .phog .screen section .topline i {
+  color: yellow;
+  font-size: 16px;
+}
+main .phone .phog .screen section .topline i:hover {
+  font-size: 19px;
+}
+main .phone .phog .screen section .infotitle {
+  width: 100%;
+  height: fit-content;
+  padding: 10% 30px;
+  padding-bottom: 0;
+  font: 15px/1 "Pretendard Variable";
+  font-weight: 500;
+  word-wrap: break-word;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  margin-top: 0px;
+}
+main .phone .phog .screen section .infotitle img {
+  width: 80%;
+  margin: 10%;
+  object-fit: contain;
+  pointer-events: none;
+}
+main .phone .phog .screen section .log {
+  height: 100%;
+  width: 85%;
+  overflow: hidden;
+  padding: 0 12%;
+  font: normal normal 12px/1.8 "Pretendard Variable";
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: justify;
+  word-wrap: break-word;
+}
+main .phone .phog .screen section .log p {
+  width: 100%;
+  color: whitesmoke;
+}
+main .phone .phog .screen section.on {
+  opacity: 1;
+  top: 5%;
+}
+main .phone .phog .phoimg {
+  width: 958px;
+  height: 828px;
+  pointer-events: none;
+}
+main .phone .phog .phoimg img {
+  position: absolute;
+  width: 958px;
+  bottom: 0px;
+  right: 0%;
+  overflow: hidden;
+}
+main .right {
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 45%;
+  background-image: linear-gradient(to bottom, yellow 33%, transparent 0%);
+  background-position: center;
+  background-size: 4px 12px; /*점선 간격 수정*/
+  background-repeat: repeat-y;
+  color: whitesmoke;
+  text-align: left;
+  padding-left: 100px;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+main .right .info {
+  position: absolute;
+  width: 80%;
+  background-color: rgb(44, 91, 246);
+  top: 240px;
+}
+main .right .info p {
+  font: normal normal 40px/1 "Pretendard Variables";
+  hyphens: inherit;
+  font-weight: 600;
+  letter-spacing: -4px;
+  text-shadow: none;
+}
+main .right .info p em {
+  hyphens: inherit;
+  font: bold normal 30px/1.5 "roc-grotesk-extrawide";
+  font-weight: 300;
+  text-shadow: 0px 0px 2px whitesmoke;
+  letter-spacing: -2px;
+  margin: 0px 10px;
+  opacity: 0;
+}
+main .right .img {
+  position: absolute;
+  width: 50%;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .right .img img {
+  width: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+main .right.on p > em {
+  opacity: 1;
+}
+main footer {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  bottom: 0%;
+  color: yellow;
+  background-color: rgb(44, 91, 246);
+  box-shadow: 0px 0px 30px yellow inset, 0px 0px 20px black;
+}
+main footer .mobilenav {
+  opacity: 0;
+  position: absolute;
+}
+main footer .winnav {
+  position: absolute;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main footer .winnav p {
+  font: normal 18px/1 "Helvetica";
+  font-weight: 900;
+  text-shadow: 0px 0px 4px yellow;
+}
+main footer .winnav em {
+  font: normal 14px/1 "Helvetica";
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+@media screen and (min-height: 946px) {
+  .bg {
+    transform: scale(1.4);
+    transform-origin: right center;
+    overflow: hidden;
+  }
+  main .phone {
+    position: absolute;
+    overflow: hidden;
+    transform: scale(1.3) translate(15%, -10%);
+    transform-origin: top right;
+    margin-top: 2%;
+  }
+  main .right .info {
+    margin-top: 120px;
+  }
+  main .left {
+    left: -40%;
+    padding-top: 80px;
+  }
+  main .left.on {
+    padding-top: 120px;
+    transform: scale(1.1) translate(8%, 5%);
+  }
+}
+@media screen and (max-width: 1434px) {
+  main .left {
+    left: -100%;
+  }
+  main .phone {
+    left: -18%;
+  }
+}
+@media screen and (max-width: 1159px) {
+  .bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    transform: scale(2.1);
+    transform-origin: top center;
+  }
+  .bg .bgbg {
+    width: 100%;
+    height: 100%;
+  }
+  main .topbox {
+    width: 100%;
+    padding: 0;
+    height: 50px;
+    background-size: 12px 4px;
+    color: whitesmoke;
+  }
+  main .topbox a i {
+    color: whitesmoke;
+  }
+  main .topbox a span {
+    opacity: 0;
+  }
+  main .topbox::after {
+    position: absolute;
+    left: 50%;
+    color: whitesmoke;
+    transform: translateX(-50%);
+    display: block;
+    content: ".songlist();";
+    font: normal 15px/1 "Helvetica";
+    font-weight: 900;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .left {
+    display: none;
+  }
+  main .phone {
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    left: 50%;
+    bottom: 0%;
+    overflow: hidden;
+    transform: translate(-50%, 0%);
+  }
+  main .phone .phog {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: scale(0.9) translate(-55%, 10%);
+  }
+  main .phone .phog .screen {
+    top: 170px;
+  }
+  main .right {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    background-image: none;
+    display: none;
+  }
+  main .right.on {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    background-image: none;
+    display: none;
+  }
+  main footer {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0px;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    background-color: rgb(44, 91, 246);
+    box-shadow: 0px 0px 15px whitesmoke inset, 0px 0px 20px black;
+  }
+  main footer .winnav {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+  }
+  main footer .mobilenav {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 20px;
+  }
+  main footer .mobilenav .btnl, main footer .mobilenav .btnr {
+    opacity: 0;
+    width: 60px;
+    height: 30px;
+    box-shadow: 0px 0px 1px whitesmoke, 0px 0px 5px whitesmoke inset;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main footer .mobilenav .btnl p, main footer .mobilenav .btnr p {
+    font: 15px/1 "Helvetica";
+    font-weight: 900;
+    color: whitesmoke;
+    text-shadow: 0px 0px 4px whitesmoke;
+    transform: rotate(-4deg);
+  }
+  main footer .mobilenav .btnl.on, main footer .mobilenav .btnr.on {
+    opacity: 1;
+  }
+  main footer .mobilenav p {
+    font: normal 18px/1 "Helvetica";
+    color: whitesmoke;
+    font-weight: 900;
+    text-shadow: 0px 0px 4px whitesmoke;
+  }
+}
+
+/*# sourceMappingURL=list.css.map */

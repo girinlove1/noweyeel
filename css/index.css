@@ -1,0 +1,594 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://use.typekit.net/bto3byu.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:visited {
+  color: whitesmoke;
+}
+
+img {
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(44, 91, 246);
+}
+body .bg {
+  object-fit: contain;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .bg .bgbg {
+  background-color: yellow;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  mask-image: url("../img/bgbg.png");
+  -webkit-mask-image: url("../img/bgbg.png");
+  mask-size: 200%;
+  display: block;
+  -webkit-mask-size: 200%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: right;
+  mask-position: right;
+  transform-origin: center center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main .topbox {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  color: yellow;
+  background-image: linear-gradient(to right, yellow 33%, transparent 0%);
+  background-position: bottom;
+  background-size: 12px 4px; /*점선 간격 수정*/
+  background-repeat: repeat-x;
+}
+main .topbox .dot {
+  opacity: 0;
+}
+main .right {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  right: 0%;
+  background-image: linear-gradient(to bottom, yellow 33%, transparent 0%);
+  background-position: left;
+  background-size: 4px 12px; /*점선 간격 수정*/
+  background-repeat: repeat-y;
+}
+main .list {
+  position: fixed;
+  z-index: 10;
+  left: 10%;
+  top: 25%;
+}
+main .list .texa {
+  color: whitesmoke;
+}
+main .list .texa em {
+  display: flex;
+  font: bold normal 20px/2 "Pretendard";
+  margin-right: 10px;
+  padding-right: 10px;
+  border-top: 4px dotted whitesmoke;
+  border-left: 10px dotted whitesmoke;
+  border-collapse: separate;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  text-shadow: 0px 0px 10px whitesmoke;
+}
+main .list .texa em:hover {
+  font-size: 25px;
+}
+main .g {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+main .g .phone {
+  z-index: 2;
+  width: 100%;
+  margin-top: -2%;
+}
+main .g .phone .phog {
+  width: 65%;
+  margin-left: 17%;
+  height: fit-content;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main .g .phone .phog a {
+  width: 50%;
+}
+main .g .phone .phog a .phoimg img {
+  width: 100%;
+  object-fit: contain;
+}
+main .g .phone .phog .phoui {
+  z-index: 3;
+  width: 20%;
+  display: flex;
+  justify-content: end;
+  margin-left: 5%;
+  margin-top: -20%;
+}
+main .g .phone .phog .phoui .title {
+  color: yellow;
+}
+main .g .phone .phog .phoui .title .new {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 18px/1 "Helvetica";
+}
+main .g .phone .phog .phoui .title em {
+  transform: rotate(5deg);
+  margin-top: 25px;
+  transition: 0.3s;
+  font: bold 1.5vw/1 "Helvetica";
+}
+main .g .phone .phog .phoui .title p {
+  margin-top: 10px;
+  opacity: 0;
+  font: italic 15px/1.2 "Pretendatd Variable";
+}
+main .g .phone .phog:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+main .g .phone .phog:hover .phoui p {
+  opacity: 1;
+  transform: rotate(-5deg);
+}
+main .g .airpod {
+  z-index: 3;
+  width: 100%;
+  height: fit-content;
+  margin-top: -3%;
+}
+main .g .airpod .phog {
+  width: 30%;
+  margin-left: 60%;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-self: flex-start;
+}
+main .g .airpod .phog a {
+  width: 100%;
+}
+main .g .airpod .phog a .podimg {
+  width: 100%;
+  margin-top: -20%;
+}
+main .g .airpod .phog a .podimg img {
+  width: 100%;
+}
+main .g .airpod .phog .phoui {
+  z-index: 3;
+  width: fit-content;
+  height: fit-content;
+  margin-top: -10%;
+  margin-left: 5%;
+}
+main .g .airpod .phog .phoui .title {
+  color: yellow;
+}
+main .g .airpod .phog .phoui .title .new {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 18px/1 "Helvetica";
+}
+main .g .airpod .phog .phoui .title em {
+  margin-top: 20px;
+  transition: 0.3s;
+  font: bold 1vw/1 "Helvetica";
+}
+main .g .airpod .phog .phoui .title p {
+  opacity: 0;
+  font: italic 15px/1.2 "Helvetica";
+}
+main .g .airpod .phog:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+main .g .airpod .phog:hover .phoui p {
+  opacity: 1;
+  transform: rotate(-5deg);
+}
+main .g .lt {
+  width: 100%;
+  z-index: 2;
+  margin-top: -5%;
+}
+main .g .lt .phog {
+  width: 50%;
+  margin-left: 8%;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
+}
+main .g .lt .phog a {
+  margin-top: -10%;
+}
+main .g .lt .phog a .ltimg {
+  width: 100%;
+}
+main .g .lt .phog a .ltimg img {
+  width: 100%;
+  transform: rotate(10deg);
+}
+main .g .lt .phog .phoui {
+  z-index: 3;
+  width: 100%;
+  margin-left: 20%;
+  margin-top: -10%;
+}
+main .g .lt .phog .phoui .title {
+  color: yellow;
+  width: 200px;
+  height: 200px;
+  left: 200px;
+}
+main .g .lt .phog .phoui .title .new {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 18px/1 "Helvetica";
+}
+main .g .lt .phog .phoui .title em {
+  transform: rotate(5deg);
+  margin-top: 20px;
+  font: bold 1vw/1 "Helvetica";
+}
+main .g .lt .phog .phoui .title p {
+  margin-top: 0px;
+  opacity: 0;
+  font: italic 13px/1.2 "Helvetica";
+}
+main .g .lt .phog:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+main .g .lt .phog:hover .phoui em {
+  top: 45px;
+}
+main .g .lt .phog:hover .phoui p {
+  opacity: 1;
+  transform: rotate(-5deg);
+}
+main footer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  padding-top: 50vh;
+  padding-bottom: 3%;
+  text-align: center;
+}
+main footer .oomr {
+  font: bold normal 35px/1 "Helvetica Bold";
+  color: yellow;
+  font-weight: 900;
+  text-shadow: 0px 0px 13px whitesmoke;
+  letter-spacing: -4px;
+  transition: 0.3s;
+}
+main footer p {
+  font: bold normal 15px/1.5 "Helvetica";
+  font-weight: 700;
+  color: yellow;
+  text-shadow: 0px 0px 3px rgb(44, 91, 246);
+  text-align: center;
+}
+main footer .mobilenav {
+  display: none;
+}
+
+@media screen and (max-width: 694px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  main {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    position: fixed;
+  }
+  main .topbox {
+    width: 100%;
+    height: 35px;
+    z-index: 10;
+  }
+  main .topbox .dot {
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  main .topbox .dot i {
+    font-size: 8px;
+    margin-right: 5px;
+    color: rgb(44, 91, 246);
+    text-shadow: 0px 0px 2px whitesmoke;
+    color: transparent;
+  }
+  main .topbox .dot i.on {
+    color: whitesmoke;
+  }
+  main .right {
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    left: 50vw;
+    bottom: 0%;
+    pointer-events: none;
+    height: calc(100% - 30px);
+  }
+  main .list {
+    top: 0%;
+    transform: scale(0.8);
+    display: flex;
+    flex-flow: row;
+    display: none;
+  }
+  main .g {
+    width: 300%;
+    height: 100%;
+    top: 0%;
+    position: absolute;
+    left: 0%;
+    overflow: scroll;
+    display: flex;
+    flex-flow: row;
+  }
+  main .g.one {
+    left: 0%;
+  }
+  main .g.two {
+    left: -100%;
+  }
+  main .g.thr {
+    left: -200%;
+  }
+  main .g .phone {
+    width: 100vw;
+    height: 90vh;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+  }
+  main .g .phone .phog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  main .g .phone .phog a {
+    width: 100%;
+    margin-left: 10%;
+  }
+  main .g .phone .phog .phoui {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: fit-content;
+    bottom: 0%;
+  }
+  main .g .phone .phog .phoui .title em {
+    font-size: 20px;
+  }
+  main .g .phone .phog .phoui .title p {
+    opacity: 1;
+    background-color: rgb(44, 91, 246);
+    font-size: 12px;
+    transform: rotate(-5deg);
+  }
+  main .g .phone .phog:hover {
+    transform: scale(1);
+  }
+  main .g .airpod {
+    width: 100vw;
+    left: 100vw;
+    top: 25%;
+    position: absolute;
+  }
+  main .g .airpod .phog {
+    width: 100%;
+    margin: 0% 0%;
+  }
+  main .g .airpod .phog .phoui {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: fit-content;
+    bottom: -33%;
+  }
+  main .g .airpod .phog .phoui .title em {
+    margin-top: 15px;
+    font-size: 18px;
+    background-color: rgb(44, 91, 246);
+  }
+  main .g .airpod .phog .phoui .title p {
+    opacity: 1;
+    background-color: rgb(44, 91, 246);
+    font-size: 12px;
+    margin-top: 15px;
+    transform: rotate(5deg);
+  }
+  main .g .airpod .phog:hover {
+    transform: scale(1);
+  }
+  main .g .lt {
+    width: 100vw;
+    left: 200vw;
+    position: absolute;
+    height: 100vh;
+    top: 37%;
+  }
+  main .g .lt .phog {
+    width: 100%;
+    margin: -10% 0%;
+  }
+  main .g .lt .phog a {
+    transform: rotate(50deg);
+    margin-top: 0;
+  }
+  main .g .lt .phog .phoui {
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    bottom: 30%;
+  }
+  main .g .lt .phog .phoui .title em {
+    font-size: 20px;
+  }
+  main .g .lt .phog .phoui .title p {
+    opacity: 1;
+    background-color: rgb(44, 91, 246);
+    font-size: 12px;
+    transform: rotate(-5deg);
+  }
+  main .g .lt .phog:hover {
+    transform: scale(1);
+  }
+  main footer {
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    padding: 0px;
+    top: 50%;
+    z-index: 10;
+  }
+  main footer .oomr::before {
+    display: block;
+    margin-bottom: -5px;
+    font: bold normal 10px/1.5 "Helvetica";
+    font-weight: 700;
+    color: whitesmoke;
+    letter-spacing: 0px;
+    text-shadow: 0px 0px 3px yellow;
+    text-align: center;
+  }
+  main footer .oomr::after {
+    display: block;
+    content: "@onkea_art";
+    margin-top: -2px;
+    font: bold normal 10px/1.5 "Helvetica";
+    font-weight: 700;
+    color: whitesmoke;
+    letter-spacing: 0px;
+    text-shadow: 0px 0px 3px yellow;
+    text-align: center;
+  }
+  main footer > p {
+    opacity: 0;
+    font-size: 10px;
+    color: whitesmoke;
+  }
+  main footer .mobilenav {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 35px;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    font-size: 20px;
+    background-color: rgb(44, 91, 246);
+  }
+  main footer .mobilenav .btnl, main footer .mobilenav .btnr, main footer .mobilenav .btnc {
+    pointer-events: all;
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+    box-shadow: 0px 0px 5px whitesmoke, 0px 0px 5px whitesmoke inset;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main footer .mobilenav .btnl.on, main footer .mobilenav .btnr.on, main footer .mobilenav .btnc.on {
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 5px rgb(44, 91, 246), 0px 0px 5px rgb(44, 91, 246) inset;
+  }
+  main footer .mobilenav .btnl.on p, main footer .mobilenav .btnr.on p, main footer .mobilenav .btnc.on p {
+    color: rgb(44, 91, 246);
+    text-shadow: 0px 0px 4px rgb(44, 91, 246);
+  }
+  main footer .mobilenav .btnl p, main footer .mobilenav .btnr p, main footer .mobilenav .btnc p {
+    font: 15px/1 "Helvetica";
+    font-weight: 900;
+    color: whitesmoke;
+    text-shadow: 0px 0px 4px whitesmoke;
+    transform: rotate(-4deg);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

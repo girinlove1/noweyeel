@@ -1,0 +1,1317 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://use.typekit.net/bto3byu.css");
+:root {
+  --yy:#bebebe ;
+  --bg:#e9e9e9 ;
+  --lc: rgb(251, 255, 183);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:visited {
+  color: whitesmoke;
+}
+
+img {
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+}
+
+body {
+  background-color: var(--bg);
+  overflow: hidden;
+}
+body .bg {
+  object-fit: contain;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+body .bg .bgbg {
+  background-color: var(--yy);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  mask-image: url("../img/bgbg.png");
+  -webkit-mask-image: url("../img/bgbg.png");
+  mask-size: 70%;
+  display: block;
+  -webkit-mask-size: 70%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: right;
+  mask-position: right;
+  transform-origin: center center;
+}
+body .loading {
+  overflow: hidden;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+body .loading .loadbg {
+  width: 100%;
+  height: 100%;
+}
+body .loading .loadbg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .loading .loadcon .loadtitle {
+  font: 3vw/1 "roc-grotesk-extrawide";
+  font-variation-settings: "wght" 50, "wdth" 100;
+  letter-spacing: -0.2vw;
+  font-weight: 400;
+  color: var(--lc);
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: rotate(10deg);
+  transition: 3s;
+}
+body .loading .loadcon .loadtitle em {
+  font-size: 1.8vw;
+  margin-left: 20px;
+}
+body .loading.on {
+  opacity: 1;
+}
+body main {
+  width: 100%;
+  height: 100vh;
+}
+body main .topbox {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 5;
+  padding: 15px;
+  display: flex;
+  color: var(--yy);
+  background-image: linear-gradient(to right, var(--yy) 33%, transparent 0%);
+  background-position: bottom;
+  background-size: 12px 4px; /*점선 간격 수정*/
+  background-repeat: repeat-x;
+}
+body main .topbox a {
+  display: flex;
+  justify-content: start;
+  padding-left: 55px;
+}
+body main .topbox a:visited {
+  color: var(--yy);
+}
+body main .topbox a i {
+  margin-right: 20px;
+  font-size: 15px;
+}
+body main .topbox a i:hover {
+  font-size: 20px;
+}
+body main .topbox a p {
+  font: normal 14px/1 "Helvetica";
+  font-weight: 600;
+  text-align: left;
+}
+body main .topbox em {
+  right: 32%;
+  position: absolute;
+  font: normal 14px/1 "Helvetica";
+  font-weight: 600;
+  text-align: right;
+}
+body main .topbox strong {
+  font: normal 14px/1 "Helvetica";
+  font-weight: 600;
+  text-align: left;
+  left: 72%;
+  position: absolute;
+}
+body main .topbox.on {
+  color: var(--lc);
+  background-image: none;
+}
+body main .topbox.on a:visited {
+  color: var(--lc);
+}
+body main .left {
+  z-index: 4;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 185px;
+  left: 70px;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
+  color: var(--yy);
+}
+body main .left .label {
+  text-align: right;
+  font: 15px/1.5 "Pretendard Variables";
+  font-weight: 900;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+body main .left .label img {
+  width: 20px;
+  margin-right: 10px;
+}
+body main .left .label p {
+  opacity: 1;
+}
+body main .left .listbox {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--bg), transparent 0%, var(--bg));
+  border: 1px solid var(--yy);
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px var(--yy) inset;
+  overflow: hidden;
+}
+body main .left .listbox .topline {
+  height: 27px;
+  padding: 0px 10px;
+  border-bottom: 2px dotted var(--yy);
+  background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: bold 13px/1.5 "Pretendard Variables";
+}
+body main .left .listbox .topline i {
+  font-size: 17px;
+  opacity: 0;
+  text-shadow: 0px 0px 2px var(--bg);
+}
+body main .left .listbox .topline i:hover {
+  font-size: 19px;
+}
+body main .left .listbox .list {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+}
+body main .left .listbox .list .img {
+  width: 80%;
+}
+body main .left .listbox .list .img img {
+  width: 100%;
+  object-fit: contain;
+  margin: 20px 0px;
+  pointer-events: none;
+}
+body main .left .listbox .list .lili {
+  opacity: 0;
+  width: 100%;
+  height: fit-content;
+}
+body main .left .listbox .list .lili .li {
+  width: 100%;
+  height: fit-content;
+  overflow: scroll;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  justify-content: center;
+}
+body main .left .listbox .list .lili .li li {
+  width: 300%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+body main .left .listbox .list .lili .li li a {
+  width: 300%;
+  height: 25px;
+  box-shadow: 0px 0px 2px var(--yy) inset;
+  background-color: var(--bg);
+  padding: 0px 10px;
+  padding-top: 2px;
+}
+body main .left .listbox .list .lili .li li a p {
+  color: var(--bg);
+  font: bold 15px/1 "Pretendard Variables";
+  display: inline-block;
+  width: fit-content;
+  text-shadow: 0px 0px 6px var(--yy);
+}
+body main .left .listbox .list .lili .li li a:hover a {
+  background-color: var(--bg);
+  box-shadow: 0px 0px 1px var(--yy) inset, 0px 0px 10px var(--bg);
+}
+body main .left .listbox .list .lili .li li a:hover p {
+  font-size: 18px;
+  color: var(--yy);
+  text-shadow: 0px 0px 10px var(--yy);
+}
+body main .left .listbox .list .lili .li li a:hover p.long {
+  animation: list 2s linear;
+}
+body main .left:hover .label > p {
+  opacity: 1;
+}
+body main .left:hover .listbox {
+  width: 200px;
+  height: fit-content;
+  box-shadow: 0px 0px 4px var(--yy);
+}
+body main .left:hover .listbox .list .lili {
+  opacity: 1;
+}
+body main .phone {
+  z-index: 3;
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+}
+body main .phone .phog .vidimg {
+  position: absolute;
+  width: 270px;
+  height: 420px;
+  right: 346px;
+  top: 220px;
+  overflow: hidden;
+  pointer-events: none;
+}
+body main .phone .phog .vidimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .phone .phog .vidimg video {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 300px;
+  object-fit: cover;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+body main .phone .phog .vidimg .vidbg {
+  width: 100%;
+  height: 80%;
+  top: 0%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgb(23, 23, 23) 3%, transparent);
+}
+body main .phone .phog .phoimg {
+  width: 958px;
+  height: 828px;
+  pointer-events: none;
+}
+body main .phone .phog .phoimg img {
+  position: absolute;
+  width: 958px;
+  bottom: 0px;
+  right: 0%;
+  overflow: hidden;
+}
+body main .phone .phog figure {
+  position: absolute;
+  width: 270px;
+  height: 420px;
+  right: 343px;
+  top: 221px;
+  display: flex;
+  flex-flow: column;
+  align-content: space-between;
+  padding-top: 10px;
+}
+body main .phone .phog figure .playergroup {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 30px 22px;
+}
+body main .phone .phog figure .playergroup .lyric {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  color: whitesmoke;
+  text-shadow: 0px 0px 3px var(--yy);
+  font: bold normal 16px/1 "Pretendard";
+  font-weight: 700;
+}
+body main .phone .phog figure .playergroup .lyric em {
+  font: normal normal 13px/1.5 "Pretendard Variables";
+  letter-spacing: 0px;
+  font-weight: 500;
+}
+body main .phone .phog figure .playergroup article {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  top: 45px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  text-align: left;
+  color: whitesmoke;
+  text-shadow: 0px 0px 3px var(--bg);
+  font: normal normal 16px/1 "Pretendard";
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+body main .phone .phog figure .playergroup article .btns {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+body main .phone .phog figure .playergroup article .btns i {
+  margin-right: 6px;
+  color: whitesmoke;
+}
+body main .phone .phog figure .playergroup article .btns i:hover {
+  font-size: 20px;
+}
+body main .phone .phog figure .playergroup article .time {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+  font: normal normal 13px/1.5 "Helvetica";
+  text-shadow: 0px 0px 3px var(--yy);
+  padding-right: 50%;
+  padding-top: 1px;
+  margin-left: 10px;
+}
+body main .phone .phog figure .playergroup article .time em {
+  margin: 0px 5px;
+}
+body main .phone .phog figure .folder {
+  position: absolute;
+  top: 120px;
+  width: 270px;
+  height: 300px;
+  padding: 20px;
+  font: bold normal 11px/1.5 "Pretendard Variable";
+  text-align: center;
+  text-shadow: 0px 0px 2px var(--yy);
+  color: whitesmoke;
+}
+body main .phone .phog figure .folder .f1, body main .phone .phog figure .folder .f2, body main .phone .phog figure .folder .f3, body main .phone .phog figure .folder .f4 {
+  position: absolute;
+  opacity: 0;
+  width: 45px;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+  transform-origin: center center;
+}
+body main .phone .phog figure .folder .f1 img, body main .phone .phog figure .folder .f2 img, body main .phone .phog figure .folder .f3 img, body main .phone .phog figure .folder .f4 img {
+  width: 100%;
+  opacity: 0.6;
+  pointer-events: none;
+}
+body main .phone .phog figure .folder .f1:hover img, body main .phone .phog figure .folder .f2:hover img, body main .phone .phog figure .folder .f3:hover img, body main .phone .phog figure .folder .f4:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+body main .phone .phog figure .folder .f1 {
+  right: 12%;
+  top: 34%;
+}
+body main .phone .phog figure .folder .f2 {
+  left: 20%;
+  bottom: 34%;
+}
+body main .phone .phog figure .folder .f3 {
+  right: 35%;
+  bottom: 10%;
+}
+body main .phone .phog figure .folder .f4 {
+  opacity: 1;
+  left: 10%;
+}
+body main .phone .phog figure section {
+  opacity: 0;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 200%;
+  left: 10%;
+  background: linear-gradient(to bottom, var(--bg), transparent 20%, var(--bg));
+  border: 1px solid var(--yy);
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px var(--yy) inset, 0px 0px 50px black;
+  background-color: rgba(245, 245, 245, 0.7);
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
+body main .phone .phog figure section .topline {
+  height: 27px;
+  width: 100%;
+  padding: 3px 10px;
+  box-shadow: 0px 0px 10px var(--yy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: bold 13px/1.5 "Pretendard Variables";
+  color: var(--yy);
+}
+body main .phone .phog figure section .topline i {
+  color: whitesmoke;
+  font-size: 16px;
+  text-shadow: 0px 0px 4px var(--yy);
+}
+body main .phone .phog figure section .topline i:hover {
+  font-size: 19px;
+}
+body main .phone .phog figure .aabox {
+  opacity: 0;
+  height: 50%;
+  top: 200%;
+  margin-top: 20%;
+}
+body main .phone .phog figure .aabox .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body main .phone .phog figure .aabox .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .phone .phog figure .memobox, body main .phone .phog figure .about {
+  opacity: 0;
+}
+body main .phone .phog figure .memobox ::-webkit-scrollbar, body main .phone .phog figure .about ::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+  margin-right: 2px;
+}
+body main .phone .phog figure .memobox ::-webkit-scrollbar-thumb, body main .phone .phog figure .about ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+  border: 30px dotted var(--yy);
+  box-shadow: 0px 0px 10px var(--yy);
+  border-radius: 6px;
+}
+body main .phone .phog figure .memobox ::-webkit-scrollbar-track, body main .phone .phog figure .about ::-webkit-scrollbar-track {
+  background-color: rgba(190, 79, 79, 0);
+}
+body main .phone .phog figure .memobox .img, body main .phone .phog figure .about .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body main .phone .phog figure .memobox .img img, body main .phone .phog figure .about .img img {
+  width: 60px;
+  object-fit: contain;
+  margin: 20px 0px;
+}
+body main .phone .phog figure .memobox .log, body main .phone .phog figure .about .log {
+  width: 100%;
+  height: 60%;
+  padding: 0px 25px;
+  padding-top: 2px;
+  overflow: scroll;
+}
+body main .phone .phog figure .memobox .log p, body main .phone .phog figure .about .log p {
+  overflow: scroll;
+  color: var(--yy);
+  text-align: justify;
+  font: bold 15px/1.8 "Pretendard Variables";
+  letter-spacing: -1px;
+}
+body main .phone .phog figure .about.on {
+  opacity: 1;
+  top: 10%;
+}
+body main .phone .phog figure .infobox {
+  opacity: 0;
+  width: 94%;
+  height: 97%;
+  top: 200%;
+  left: 1%;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--bg), transparent 460%);
+  color: var(--yy);
+  padding-bottom: 10%;
+  transform: scale(1.4) translateY(-10%);
+}
+body main .phone .phog figure .infobox .title {
+  width: 100%;
+  height: fit-content;
+  padding: 10% 30px;
+  padding-bottom: 0;
+  font: 25px/1 "roc-grotesk-extrawide";
+  font-variation-settings: "wght" 50, "wdth" 100;
+  letter-spacing: -0.2vw;
+  font-weight: 400;
+  word-wrap: break-word;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  margin-top: 0px;
+}
+body main .phone .phog figure .infobox .title em {
+  font-size: 15px;
+  margin-left: 10px;
+}
+body main .phone .phog figure .infobox .title .subtitle {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  font: 8px/1.5 "Pretendard Variables";
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+body main .phone .phog figure .infobox .title img {
+  width: 30px;
+  height: 30px;
+  margin: 12% 40%;
+  object-fit: contain;
+  pointer-events: none;
+}
+body main .phone .phog figure .infobox .log {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 10%;
+  font: normal normal 13px/1.5 "Helvetica";
+  font-weight: 900;
+  letter-spacing: -1px;
+  word-wrap: break-word;
+}
+body main .phone .phog figure .infobox .log p {
+  overflow: scroll;
+  width: 100%;
+  color: whitesmoke;
+  text-decoration: underline;
+  text-shadow: 0px 0px 3px var(--yy);
+  word-wrap: break-word;
+}
+body main .phone .phog figure .infobox .log em {
+  left: 74px;
+  font-style: normal;
+  position: absolute;
+}
+body main .phone .phog figure .listmob {
+  height: fit-content;
+  color: var(--yy);
+}
+body main .phone .phog figure .listmob .list {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+}
+body main .phone .phog figure .listmob .list .img {
+  width: 80%;
+}
+body main .phone .phog figure .listmob .list .img img {
+  width: 100%;
+  object-fit: contain;
+  margin: 20px 0px;
+}
+body main .phone .phog figure .listmob .list .lili {
+  opacity: 1;
+  height: fit-content;
+  width: 100%;
+}
+body main .phone .phog figure .listmob .list .lili .li {
+  width: 100%;
+  height: fit-content;
+  overflow: scroll;
+  margin-top: 0px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  justify-content: center;
+}
+body main .phone .phog figure .listmob .list .lili .li li {
+  width: 300%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+body main .phone .phog figure .listmob .list .lili .li li a {
+  width: 300%;
+  height: 25px;
+  box-shadow: 0px 0px 2px var(--yy) inset;
+  background-color: var(--bg);
+  padding: 0px 10px;
+  padding-top: 2px;
+}
+body main .phone .phog figure .listmob .list .lili .li li a p {
+  color: var(--yy);
+  font: bold 15px/1 "Pretendard Variables";
+  display: inline-block;
+  width: fit-content;
+}
+body main .phone .phog figure nav {
+  position: absolute;
+  width: 260px;
+  height: 45px;
+  left: 0px;
+  top: 415px;
+  color: var(--yy);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  text-shadow: 0px 0px 2px var(--yy);
+  font: bold normal 15px/2 "Pretendard Variable";
+}
+body main .phone .phog figure nav p {
+  color: whitesmoke;
+  text-shadow: 0px 0px 2px whitesmoke;
+}
+body main .phone .phog figure nav .prev, body main .phone .phog figure nav .next {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  fill: var(--yy);
+  display: flex;
+  justify-content: center;
+}
+body main .phone .phog figure nav .prev object, body main .phone .phog figure nav .next object {
+  position: relative;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+body main .phone .phog figure nav .prev span, body main .phone .phog figure nav .next span {
+  margin: 0px 15px;
+  transform: rotate(4deg);
+  opacity: 0;
+}
+body main .phone .phog figure nav .prev:hover object, body main .phone .phog figure nav .next:hover object {
+  transform: scale(1.1);
+}
+body main .phone .phog figure nav .prev:hover span, body main .phone .phog figure nav .next:hover span {
+  opacity: 1;
+}
+body main .phone .phog figure nav .next span {
+  transform: rotate(-4deg);
+}
+body main .phone .phog figure nav p {
+  margin: 0px 10px;
+  font-size: 12px;
+}
+body main .right {
+  z-index: 3;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 45%;
+  color: var(--yy);
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, var(--yy) 33%, transparent 0%);
+  background-position: center;
+  background-size: 4px 12px; /*점선 간격 수정*/
+  background-repeat: repeat-y;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+body main .right .label {
+  width: 5vw;
+  overflow: visible;
+  margin-right: 50px;
+  text-align: right;
+  font: 15px/1.5 "Pretendard Variables";
+  font-weight: 900;
+  word-wrap: break-word;
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+}
+body main .right .label img {
+  width: 20px;
+  top: -10px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+body main .right .title {
+  width: 100%;
+  top: 120px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  height: fit-content;
+}
+body main .right .title .label img {
+  width: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+body main .right .title .titlebox {
+  width: 80%;
+  padding-top: 20px;
+  background-color: var(--bg);
+  font: 4vw/1 "roc-grotesk-extrawide";
+  font-variation-settings: "wght" 50, "wdth" 100;
+  letter-spacing: -0.2vw;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+body main .right .title .titlebox em {
+  font-size: 1.8vw;
+  margin-left: 20px;
+}
+body main .right .title .titlebox .subtitle {
+  text-align: left;
+  font: 20px/1.5 "Pretendard Variables";
+  font-weight: 900;
+  letter-spacing: 0px;
+  margin-bottom: 20px;
+}
+body main .right .title:hover .titlebox {
+  font-size: 5vw;
+}
+body main .right .bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  align-items: start;
+  margin-top: 8%;
+  overflow: scroll;
+}
+body main .right .bottom .bottoml {
+  width: 55%;
+  height: 100%;
+  overflow: scroll;
+}
+body main .right .bottom .bottoml .memo {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body main .right .bottom .bottoml .memo .label {
+  cursor: pointer;
+}
+body main .right .bottom .bottoml .memo .label img {
+  width: 25px;
+}
+body main .right .bottom .bottoml .memo .label i {
+  margin-top: 10px;
+  font-size: 15px;
+}
+body main .right .bottom .bottoml .memo .label .fa-arrow-alt-circle-right {
+  display: block;
+}
+body main .right .bottom .bottoml .memo .label .fa-arrow-alt-circle-left {
+  display: none;
+}
+body main .right .bottom .bottoml .memo .memor {
+  width: 40%;
+  height: fit-content;
+  overflow: scroll;
+  font: 15px/1.8 "Pretendard Variables";
+  letter-spacing: -1px;
+  font-weight: 700;
+  text-align: justify;
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+body main .right .bottom .bottoml .memo:hover .memor {
+  font-size: 16px;
+  -webkit-line-clamp: 20;
+}
+body main .right .bottom .bottoml .memo:hover i {
+  font-size: 20px;
+}
+body main .right .bottom .bottoml .aa {
+  height: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+body main .right .bottom .bottoml .aa .aabox {
+  width: 20%;
+  min-width: 90px;
+  max-width: 160px;
+  height: fit-content;
+}
+body main .right .bottom .bottoml .aa .aabox img {
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 10%;
+  border: 2px solid var(--yy);
+}
+body main .right .bottom .bottoml .aa:hover .aabox {
+  width: 30%;
+}
+body main .right .bottom .bottoml.on {
+  width: 100%;
+}
+body main .right .bottom .bottoml.on .memor {
+  width: 75%;
+  overflow: auto;
+  text-overflow: none;
+  display: block;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+body main .right .bottom .bottoml.on .fa-arrow-alt-circle-right {
+  transform: rotate(180deg);
+}
+body main .right .bottom .bottomr {
+  z-index: 5;
+  position: absolute;
+  width: 70%;
+  height: 120%;
+  left: 55%;
+  overflow: scroll;
+  color: var(--yy);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+body main .right .bottom .bottomr .infolog {
+  width: 100%;
+  text-shadow: -1px 0px var(--yy), 0px 1px var(--yy), 1px 0px var(--yy), 0px -1px var(--yy);
+  font: 18px/1.5 "Helvetica";
+  font-weight: 100;
+  word-wrap: break-word;
+}
+body main .right .bottom .bottomr .infolog p {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+}
+body main .right .bottom .bottomr .infolog em {
+  left: 66px;
+  position: absolute;
+}
+body main .right .bottom .bottomr.on {
+  left: 120%;
+}
+body main .right .bottom .bottomr:hover em {
+  left: 70px;
+}
+body main .right.load {
+  z-index: 5;
+  background-image: linear-gradient(to bottom, var(--lc) 33%, transparent 0%);
+  transition: opacity 0s;
+}
+body main .right.load .bottoml, body main .right.load .title {
+  opacity: 0;
+  transition: all 0s;
+}
+body main .right.load .bottomr .infolog {
+  transition: 0s;
+  color: var(--lc);
+  text-shadow: -1px 0px var(--lc), 0px 1px var(--lc), 1px 0px var(--lc), 0px -1px var(--lc);
+}
+body main footer {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  bottom: 0%;
+  color: var(--bg);
+  background-color: var(--bg);
+  box-shadow: 0px 0px 99px var(--yy) inset, 0px 0px 20px black;
+}
+body main footer .mobilenav {
+  opacity: 0;
+  position: absolute;
+}
+body main footer .winnav {
+  position: absolute;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main footer .winnav p {
+  font: normal 18px/1 "Helvetica";
+  color: whitesmoke;
+  font-weight: 900;
+  text-shadow: 0px 0px 4px var(--yy);
+}
+body main footer .winnav em {
+  font: normal 14px/1 "Helvetica";
+  margin-left: 10px;
+  font-weight: 600;
+}
+body main footer.on {
+  box-shadow: none;
+  background-color: transparent;
+}
+body main footer.on em, body main footer.on p {
+  color: var(--lc);
+}
+@keyframes list {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-27%);
+  }
+}
+@media screen and (min-height: 946px) {
+  body .bg {
+    transform: scale(1.4);
+    transform-origin: right center;
+    overflow: hidden;
+  }
+  body .phone {
+    position: absolute;
+    overflow: hidden;
+    transform: scale(1.3) translate(15%, -10%);
+    transform-origin: top right;
+    margin-top: 2%;
+  }
+  body .right {
+    padding-top: 120px;
+  }
+  body .right .title .titlebox {
+    font: 5vw/1 "roc-grotesk-extrawide";
+  }
+  body .right .title .titlebox:hover .titlebox {
+    font-size: 6vw;
+  }
+  body .left {
+    left: -40%;
+    padding-top: 80px;
+  }
+  body .left.on {
+    padding-top: 120px;
+    transform: scale(1.1) translate(8%, 5%);
+  }
+}
+@media screen and (max-width: 1434px) {
+  body main .left {
+    left: -100%;
+  }
+  body main .phone {
+    left: -18%;
+  }
+  body main .phone .phog figure .folder .f1 {
+    opacity: 1;
+  }
+  body main .phone .phog .listmob.on {
+    top: 5%;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1159px) {
+  body .loading .loadtitle {
+    opacity: 0;
+  }
+  body .bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    transform: scale(3);
+  }
+  body .bg .bgbg {
+    width: 100%;
+    height: 100%;
+  }
+  body main .topbox {
+    width: 100%;
+    padding: 0;
+    height: 40px;
+    background-size: 0px 2px;
+    box-shadow: 0px 0px 5px var(--yy);
+  }
+  body main .topbox a, body main .topbox em, body main .topbox strong {
+    opacity: 0;
+    display: inline-block;
+    width: 0;
+    height: 0;
+  }
+  body main .topbox::before {
+    position: absolute;
+    width: 50%;
+    right: 50%;
+    display: block;
+    content: "nowey.eel";
+    font: normal 15px/1 "Helvetica";
+    color: whitesmoke;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0px 0px 4px var(--yy);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-top: 12px;
+    padding-right: 2px;
+  }
+  body main .topbox::after {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    display: block;
+    content: "@onkea_art";
+    font: normal 13px/1 "Helvetica";
+    font-weight: 700;
+    text-align: center;
+    padding-left: 2px;
+    padding-top: 14px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+  }
+  body main .topbox.on {
+    box-shadow: 0px 0px 5px var(--lc);
+    color: var(--lc);
+  }
+  body main .topbox.on p, body main .topbox.on em {
+    color: var(--lc);
+  }
+  body main .left {
+    display: none;
+  }
+  body main .phone {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    bottom: 0%;
+    overflow: hidden;
+    transform: translate(-50%, 0%);
+  }
+  body main .phone .phog {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: scale(0.9) translate(-55%, 10%);
+  }
+  body main .phone .phog .vidimg, body main .phone .phog figure {
+    top: 161px;
+  }
+  body main .phone .phog figure .folder .f2, body main .phone .phog figure .folder .f3 {
+    opacity: 1;
+  }
+  body main .phone .phog figure section.on {
+    opacity: 1;
+    top: 10%;
+  }
+  body main .phone .phog figure .listmob.on {
+    opacity: 1;
+    top: 5%;
+  }
+  body main .phone .phog figure .infobox.on {
+    opacity: 1;
+    top: 20%;
+  }
+  body main .right {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    background-image: none;
+  }
+  body main .right .label {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  body main .right .title {
+    position: absolute;
+    width: 80%;
+    height: 70px;
+    top: 6vh;
+    left: 10%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: none;
+    margin-top: 0;
+    text-align: center;
+  }
+  body main .right .title .titlebox {
+    padding: 0;
+    font-size: 5vw;
+    font-variation-settings: "wght" 300, "wdth" 120;
+    text-align: center;
+    background-color: transparent;
+  }
+  body main .right .title .titlebox em, body main .right .title .titlebox .subtitle {
+    font-size: 0px;
+    display: none;
+  }
+  body main .right .title::before {
+    position: absolute;
+    left: -50px;
+    margin-left: 10%;
+    margin-top: 8px;
+    display: block;
+    font: 27px/1 "Pretendard Variables";
+    font-weight: 500;
+    content: "*｡°{";
+    display: flex;
+    justify-content: left;
+  }
+  body main .right .title::after {
+    position: absolute;
+    right: -50px;
+    margin-top: 8px;
+    margin-right: 10%;
+    font: 27px/1 "Pretendard Variables";
+    font-weight: 500;
+    display: block;
+    content: "}°｡*";
+  }
+  body main .right .bottom {
+    display: none;
+    width: 0%;
+    height: 0%;
+  }
+  body main .right.load {
+    z-index: 5;
+    top: 10%;
+    color: var(--lc);
+  }
+  body main .right.load .title {
+    opacity: 1;
+  }
+  body main .right.load .bottom {
+    display: block;
+  }
+  body main .right.load .bottom .bottomr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-38%);
+  }
+  body main .right.load .bottom .bottomr .infolog {
+    text-shadow: -1px 0px var(--lc), 0px 1px var(--lc), 1px 0px var(--lc), 0px -1px var(--lc);
+  }
+  body main .right.load .bottom .bottoml {
+    display: none;
+    width: 0%;
+    height: 0%;
+  }
+  body main footer {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0px;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    background-color: var(--yy);
+    box-shadow: 0px 0px 80px var(--bg) inset, 0px 0px 20px black;
+  }
+  body main footer .winnav {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+  }
+  body main footer .mobilenav {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 20px;
+  }
+  body main footer .mobilenav .btnl, body main footer .mobilenav .btnr {
+    width: 60px;
+    height: 30px;
+    box-shadow: 0px 0px 5px var(--yy), 0px 0px 5px var(--yy) inset;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main footer .mobilenav .btnl p, body main footer .mobilenav .btnr p {
+    font: 15px/1 "Helvetica";
+    font-weight: 900;
+    color: var(--bg);
+    text-shadow: 0px 0px 4px var(--yy);
+    transform: rotate(-4deg);
+  }
+  body main footer .mobilenav p {
+    font: normal 18px/1 "Helvetica";
+    color: whitesmoke;
+    font-weight: 900;
+    text-shadow: 0px 0px 4px var(--yy);
+  }
+  body main footer.on {
+    color: var(--lc);
+  }
+  body main footer.on p, body main footer.on em {
+    color: var(--lc);
+  }
+  body main footer.on .mobilenav .btnl, body main footer.on .mobilenav .btnr {
+    box-shadow: 0px 0px 5px var(--lc);
+    color: var(--lc);
+  }
+  body main footer.on .mobilenav .btnl p, body main footer.on .mobilenav .btnl em, body main footer.on .mobilenav .btnr p, body main footer.on .mobilenav .btnr em {
+    color: var(--lc);
+  }
+}
+
+/*# sourceMappingURL=song.css.map */

@@ -1,0 +1,287 @@
+$mc: whitesmoke;
+// $mc:grey;
+$tc: rgb(156, 156, 156);
+$bg: rgb(44, 91, 246);
+$yy: rgb(255, 221, 120);
+
+@import "reset";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+// font-family: 'Pretendard Variable;
+
+@import url("https://use.typekit.net/bto3byu.css");
+//font-family: "futura-pt"
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+    // opacity: .5;
+    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: $bg;
+    overflow: hidden;
+    
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        pointer-events: none;
+    }
+
+
+    .topbox {
+        position:absolute;
+        width: 100%;
+        height: 50px;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 5;
+    
+        background-image: linear-gradient(to right, $mc 33%,
+    transparent 0%);
+        background-position: bottom; 
+        background-size: 12px 4px;/*점선 간격 수정*/
+        background-repeat: repeat-x;
+        color: $mc;
+
+        text-shadow: 0px 0px 10px $mc;
+        padding: 0% calc(8% + 20px);
+        padding-right: 8%;
+    a{
+        display: flex;
+        align-items: center;
+        &:hover{
+            transform: scale(1.2);
+            
+        }
+        span{
+            font: normal 14px/1 "Helvetica";
+            font-weight: 600;
+            text-align: left;
+            margin-left: 10px;
+        }
+    }
+    p{
+      text-align: right;
+        font: bold 15px/1 "Helvetica";
+    } 
+    }  
+.left {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+
+    padding: 0% 8%;
+    padding-top: 20%;
+    position: absolute;
+    z-index: 2; 
+    overflow: hidden;
+   
+    background-image: linear-gradient(to bottom, $mc 33%,
+    transparent 0%);
+    background-position: center;
+    background-size: 4px 12px;/*점선 간격 수정*/
+    background-repeat: repeat-y;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+   
+    .profile{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        padding: 20px;
+        flex-flow: column;
+        justify-content: start;
+        align-items: start;
+        // border: 1px solid saddlebrown;
+
+     
+
+        .protext{
+            // border: 1px saddlebrown solid;
+            // top: 20%;
+            left: 10%;
+            width: 200px;
+            height: 100px;
+            color: $mc;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+          
+            span, p {
+                display: block;
+                transform: rotate(10deg);
+                font: bold normal 18px/1.5 'Pretendard Variable';
+
+            }
+            .snss {
+                a{
+                font: 20px/1 "Helvetica";
+                color: $mc;
+                margin-top: 10px;
+                cursor: pointer;}
+            }
+            
+     
+        }
+
+       
+     
+    }
+    .log {
+        bottom: 0%;
+        margin-top: 35%;
+        width: 100%;
+        height: 30%;
+        color: $mc;
+        // border: 1px solid salmon;
+        overflow: scroll;
+        ::-webkit-scrollbar{
+
+            width: 8px;
+            height: 0px;
+            // opacity: .5;
+            
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(152, 188, 251, 0);
+            border: 10px dotted $yy;
+            border-radius: 6px;
+        
+        }
+        
+        ::-webkit-scrollbar-track {
+            background-color: rgba(212, 212, 212, 0);
+        
+            border-radius: 6px;
+    
+            &:hover {
+                background-color: rgba(212, 212, 212, 0.718);;
+            }
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+            
+
+            // border: 3px dotted $mc;
+
+            .logtext{
+                width: 100%;
+                height: 100%;
+                bottom: 5%;
+                padding: 20px 20px;
+                overflow: scroll;
+                text-align: justify;
+    
+                font: normal 14px/1.8 'Pretendard Variable';
+                letter-spacing: -1px;
+                font-weight: 500;
+                p{
+                    display: block;
+                    color: $mc;
+                    a{
+                    color: lightgoldenrodyellow;
+                    text-decoration: 2px underline;
+                    font-weight: 700;
+                    // font-style: italic;
+                    cursor: pointer;
+                }
+                }
+    
+            }
+        
+    }
+}
+
+
+footer{
+    width: 100vw;
+    height: 50vh;
+
+    position: fixed;
+    text-align: center;
+    left: 0%;
+    bottom: 0%;
+    z-index: 10;
+    padding-bottom: 3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+
+    .oomr{
+        font: bold normal 35px/1 "Helvetica Bold";
+        color: $mc;
+        font-weight: 900;
+        text-shadow: 0px 0px 13px $mc;
+        letter-spacing: -4px;
+        transition: .3s;
+
+
+    }
+    p{
+    font: bold normal 15px/1.5 'Helvetica';
+    font-weight: 700;
+    color:$mc;
+    text-shadow: 0px 0px 1px $mc;
+    text-align: center;
+}
+
+}
+
+}
+
+
+@media screen and (min-width:715px){
+
+    main{
+
+        .left{
+
+    padding: 10% 20%;
+    
+            .profile{
+                width: 100%;
+                // border: 1px solid salmon;
+                padding-top: 0;
+                padding: 0;
+                
+            }
+        .log{
+            top: 60%;
+            height: 30%;
+            width: 60%;
+        margin-top: 0%;
+            position: absolute;
+            // border: 1px solid saddlebrown;
+            .logtext{
+
+                padding: 0;
+            }
+        }
+        }
+    }
+    
+}

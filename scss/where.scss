@@ -63,9 +63,14 @@ main {
     a{
         display: flex;
         align-items: center;
+        color: $mc;
         &:hover{
             transform: scale(1.2);
             
+        }
+        &:visited{
+
+        color: $mc;
         }
         span{
             font: normal 14px/1 "Helvetica";

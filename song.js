@@ -18,12 +18,12 @@
     dom.player.setAttribute('src',`${musicn}`);
 
     //각 음악 메모
-    const memotxt = await fetch (`txt/memotxt/${fname}.txt`);
-    const memtxt = await memotxt.text();
-    const memo = document.querySelectorAll('.memolog');
-    memo.forEach(memo=>{
-        memo.innerHTML = memtxt;
-    })
+    // const memotxt = await fetch (`txt/memotxt/${fname}.txt`);
+    // const memtxt = await memotxt.text();
+    // const memo = document.querySelectorAll('.memolog');
+    // memo.forEach(memo=>{
+    //     memo.innerHTML = memtxt;
+    // })
 
     //음악 플레이 버튼
     const article = document.querySelector('article');

@@ -74,9 +74,13 @@ main .topbox {
 main .topbox a {
   display: flex;
   align-items: center;
+  color: whitesmoke;
 }
 main .topbox a:hover {
   transform: scale(1.2);
+}
+main .topbox a:visited {
+  color: whitesmoke;
 }
 main .topbox a span {
   font: normal 14px/1 "Helvetica";

@@ -642,6 +642,16 @@ main {
                             text-align: justify;
                             font: bold 15px/1.8 "Pretendard Variables";
                             letter-spacing: -1px;     
+                             a{
+                            color: $yy;
+                            text-shadow: 0px 0px 2px $yy;
+
+                            &:visited{
+                                color: $yy;
+                            text-shadow: 0px 0px 2px $yy;
+
+                            }
+                        }
                         }
                     }
                 }
@@ -1015,6 +1025,16 @@ main {
                         display: -webkit-box;
                         -webkit-line-clamp: 6;
                         -webkit-box-orient: vertical;
+                        a{
+                            color: $yy;
+                            text-shadow: 0px 0px 2px $yy;
+
+                            &:visited{
+                                color: $yy;
+                            text-shadow: 0px 0px 2px $yy;
+
+                            }
+                        }
 
                     }
                     &:hover{
